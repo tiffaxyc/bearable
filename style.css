@@ -1,0 +1,65 @@
+@font-face{
+	font-family: 'FuturaHandwritten';
+	font-style: normal;
+	src: url('FuturaHandwritten.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+	overflow: hidden;
+}
+
+body{
+	background: #f4ecb6;
+	font-family: "FuturaHandwritten";
+	font-size: 20px;
+	color: #222;
+	margin: 0;
+}
+
+h1{
+    text-align: center;
+	margin: 100px;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.bear{  
+	width: 800px;
+	margin-top: -150px;
+}
+
+.button {
+    background-color: #f4b6c2; 
+    color: #222; 
+    border: none;
+    padding: 30px 50px; 
+    font-size: 20px; 
+    font-family: "FuturaHandwritten"; 
+    cursor: pointer; 
+    border-radius: 50px; 
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+.button:hover {
+    background-color: #f4a3b1;
+}
+
+.introBear, .sleep{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+	padding: 30px;
+}
+
+
