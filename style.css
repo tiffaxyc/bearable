@@ -11,11 +11,12 @@ html, body {
 }
 
 body{
-	background: #f4ecb6;
+	background: #d5cd9b;
 	font-family: "FuturaHandwritten";
 	font-size: 20px;
 	color: #222;
 	margin: 0;
+	text-align: center;
 }
 
 h1{
@@ -35,7 +36,7 @@ h1{
 }
 
 .button {
-    background-color: #f4b6c2; 
+    background-color: #f3cbd3; 
     color: #222; 
     border: none;
     padding: 30px 50px; 
@@ -55,7 +56,7 @@ h1{
     background-color: #f4a3b1;
 }
 
-.introBear, .sleep{
+.prompt{
 	margin: auto;
 	width: 50%;
 	text-align: center;
@@ -63,28 +64,93 @@ h1{
 	padding: 30px;
 }
 
-#sleep1{
+#sleep1, #eat1, #exercise1, #hobby1, #social1{
 	top: 70%;
 }
 
-.bearSleep{
-	width: 500px;
-	margin-top: -200px;
+.bearSleep, .bearsocial{
+	width: 600px;
+	margin-top: -370px;
 }
 
-#sleepTip{
+.bearEat{
+	width: 400px;
+	margin-top: -150px;
+}
+
+.bearExercise{
+	width: 650px;
+	margin-top: -330px;
+}
+
+.bearReading{
+	width: 700px;
+	margin-top: -290px;
+}
+
+#sleepTip, #eatTip, #exerciseTip, #hobbyTip, #socialTip{
 	background-color: #7c6d706a; 
-	top: 30%;
+	top: 45%;
 	margin-left: 620px;
 	padding: 30px 35px; 
 	border-radius: 80px; 
 	overflow: hidden;
 }
 
-#sleepFunFact{
+#sleepFunFact, #eatFunFact, #exerciseFunFact, #hobbyFunFact, #socialFunFact{
 	background-color: #7c6d706a; 
-	top: 45%;
+	top: 60%;
 	margin-left: 620px;
 	padding: 20px 25px; 
 	border-radius: 80px; 
 }
+
+.popup .overlay{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	display: none;
+}
+
+.popup .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background-color: #8f7b5d; 
+	width: 450px;
+	height: 250px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.popup .close-btn{
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.popup.active .overlay{
+	display: block;
+}
+
+.popup.active .content{
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.comments{
+	position: relative;
+	top: -60px;
+}
+

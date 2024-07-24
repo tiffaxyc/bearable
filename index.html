@@ -19,7 +19,7 @@
 
     <!-- Introduction Page Section -->
     <div id="introPage" style="display: none;">
-        <div class="introBear">
+        <div class="prompt">
             <p>Bear has been feeling down lately. 
                 In fact, for the past few days, Bear has not been paw-sitive about anything! 
                 First, Bear's jar of honey got stolen, then there was a bear-y big argument with Bear's favorite
@@ -31,7 +31,7 @@
 
     <!-- 01. Sleep Task Page Section -->
     <div id="sleepPage" style="display: none;">
-        <div class="sleep">
+        <div class="prompt">
             <p>Bear has not been sleeping well. 
                 In fact, Bear's sleeping timer claims Bear has slept for only 2 hours a day! </p>
             </p>How has your sleep schedule been? Have you slept for less than 8 hours last night 
@@ -45,72 +45,264 @@
     <!-- 01a. Sleep2 Option Page Section -->
     <div id="sleep2Page" style="display: none">
         <h1>Nap time!</h1>
+        <div class="comments">
+            <p>Nap like a bear! Let yourself rest and recharge.</p>
+            <p>And don't forget, come back after you have rested!</p>
+        </div>
         <div class="container">
             <img class= "bearSleep" src="bearsleep.png" alt="bear sleeping in bed">
         </div>
-        <div class="zzz-container"></div>
-        <button class="button" id ="sleepTip" onclick="updateSleepTip()">tip</button>
-        <button class="button" id ="sleepFunFact" onclick="updateSleepFunFact()">fun fact</button>
+        <!-- Pop-up Button for tip -->
+        <div class="popup" id="popup-sleepTip">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-sleepTip')">&times;</div>
+                <h2>tip</h2>
+                <p>Make your bedroom a cozy, comfortable place for sleep.</p>
+            </div>
+        </div>
+        <button class="button" id ="sleepTip" onclick="togglePopup('popup-sleepTip')">tip</button>
+
+        <!-- Pop-up Button for fun fact -->
+        <div class="popup" id="popup-sleepFF">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-sleepFF')">&times;</div>
+                <h2>fun fact</h2>
+                <p>Sea otters hold hands while they sleep so they don't drift apart!</p>
+            </div>
+        </div>
+        <button class="button" id ="sleepFunFact" onclick="togglePopup('popup-sleepFF')">fun fact</button>
+
         <a href="#" class="button" id="nap-done">Click if you've napped! -></a>
     </div>
 
     <!-- 01ab. After Sleep Section -->
-    <div id ="afterSleep1" style="display: none;">
-        <div class="after-bear-sleep">
-            <p>Bear has just finished her nap too! Check out the mood meter to see Bear's improved mood! 
-            </p>
-        </div>
+    <div id ="afterAllSleep" style="display: none;">
+        
     </div>
 
     <!-- 02. Eating Section -->
     <div id="eatPage" style="display: none;">
-        <div class="eat">
-            <p>Bear has not been eating well.
-                After Bear's honey jar got stolen, she has had no appetite whatsoever.
-                But this morning, her friend gave her a new jar of honey!</p>
-            <p>Have you been eating?</p>
+        <div class="prompt">
+            <p>Bear has not been eating well. After Bear’s honey jar got stolen, she lost her appetite and could barely enjoy any meals. 
+                But this morning, her friend brought her a new jar of honey, and Bear is excited to eat again!</p>
+            <p>How has your eating been? Have you been missing meals or struggling with your appetite lately?
+                If so, it might be time to have a good meal! 
+            </p>
         </div>
         <a href="#" class="button" id="eat1">I have eaten! -></a>
-        <a href="#" class="button" id="eat2">I have not eaten! -></a>
+        <a href="#" class="button" id="eat2">I am in need of a bear-sized meal! -></a>
     </div>
 
     <!-- 02a. Eat2 Option Section -->
     <div id="eatPage2" style="display: none;">
-        <h1>It's time for a feast!</h1>
+        <h1>It'ssss Munch Time!</h1>
+        <div class="comments">
+            <p>It’s time to enjoy a yummy meal, just like Bear with her honey!</p>
+            <p>After your meal, come back and let’s continue our adventure!</p>
+        </div>
+        <div class="container">
+            <img class= "bearEat" src="beareat.png" alt="bear holding honey">
+        </div>
+        <!-- Pop-up Button for tip -->
+        <div class="popup" id="popup-eatTip">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-eatTip')">&times;</div>
+                <h2>tip</h2>
+                <p>Make it a habit to drink water with your meals and all day long! 
+                    Staying hydrated is key to feeling great and staying healthy.</p>
+            </div>
+        </div>
+        <button class="button" id ="eatTip" onclick="togglePopup('popup-eatTip')">tip</button>
+
+        <!-- Pop-up Button for fun fact -->
+        <div class="popup" id="popup-eatFF">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-eatFF')">&times;</div>
+                <h2>fun fact</h2>
+                <p>Honeybees use a special dance to tell their hive mates where to find the best food sources! 
+                    It’s called the <strong>waggle dance</strong>.</p>
+            </div>
+        </div>
+        <button class="button" id ="eatFunFact" onclick="togglePopup('popup-eatFF')">fun fact</button>
+
+        <a href="#" class="button" id="eat-done">Click if you've eaten! -></a>
     </div>
 
     <!-- 02ab. After Eat2 Section -->
     <div id="afterEat2" style="display:none;">
+        
     </div>
     <!-- 03. Exercise Section -->
     <div id="exercisePage" style="display: none;">
+        <div class="prompt">
+            <p>Bear has been feeling sluggish lately. 
+                Bear’s Health App shows Bear has only walked 0.1 mile this week—just to grab honey from a friend!
+                After being inactive for a while, Bear’s energy is low. 
+                But now, Bear is ready to get moving and feel great again!</p>
+            <p>How has your exercise routine been? Have you been skipping workouts or feeling unmotivated? 
+                If so, it might be time to start moving!</p>
+        </div>
+        <a href="#" class="button" id="exercise1">I've already moved! -></a>
+        <a href="#" class="button" id="exercise2">I need to get moving! -></a>
     </div>
     <!-- 03a. Exercise2 Section -->
-    <div id="exercise2" style="display:none;">
+    <div id="exercise2Page" style="display:none;">
+        <h1>It's Time to Start Movin'!</h1>
+        <div class="comments">
+            <p>It’s time to get your body moving and your heart pumping!</p>
+            <p>Once you’ve finished moving, return here and we’ll continue the fun!</p>
+        </div>
+        <div class="container">
+            <img class= "bearExercise" src="bearexercise.png" alt="bear exercising">
+        </div>
+        <!-- Pop-up Button for tip -->
+        <div class="popup" id="popup-exerciseTip">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-exerciseTip')">&times;</div>
+                <h2>tip</h2>
+                <p>Always start your workout with a warm-up to prepare your body and prevent injuries.</p>
+            </div>
+        </div>
+        <button class="button" id ="exerciseTip" onclick="togglePopup('popup-exerciseTip')">tip</button>
+
+        <!-- Pop-up Button for fun fact -->
+        <div class="popup" id="popup-exerciseFF">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-exerciseFF')">&times;</div>
+                <h2>fun fact</h2>
+                <p>The 'runner’s high' is a real phenomenon where the body releases 
+                    endorphins during intense exercise, making you feel euphoric!</p>
+            </div>
+        </div>
+        <button class="button" id ="exerciseFunFact" onclick="togglePopup('popup-exerciseFF')">fun fact</button>
+
+        <a href="#" class="button" id="exercise-done">Click here to finish up! -></a>
     </div>
     <!-- 03ab. After Exercise2 Option Section -->
     <div id="afterExercise2" style="display: none;">
     </div>
     <!-- 04. Hobby Section -->
     <div id="hobbyPage" style="display: none;">
+        <div class="prompt">
+            <p>Bear hasn't been enjoying any fun activities lately. She hasn't been tending to her garden and she hasn't
+                been reading at all! If you know Bear, you would know she always has her nose in a book.
+
+            <p>How about you? Have you been neglecting things you love? This is the time to dive back into your favorite 
+                activities or try something new! </p>
+
+        </div>
+        <a href="#" class="button" id="hobby1">I've been having fun! -></a>
+        <a href="#" class="button" id="hobby2">I could use some time for hobbies! -></a>
     </div>
     <!-- 04a. Hobby2 Section -->
-    <div id="hobby2" style="display: none;">
+    <div id="hobby2Page" style="display: none;">
+        <h1>It's Time to Have Some Fun!</h1>
+        <div class="comments">
+            <p>It’s time to dive into something you love and have some fun!</p>
+            <p>When you’re finished, come back here and we’ll continue having fun together!</p>
+        </div>
+        <div class="container">
+            <img class= "bearReading" src="bearread.png" alt="bear reading a red book">
+        </div>
+        <!-- Pop-up Button for tip -->
+        <div class="popup" id="popup-hobbyTip">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-hobbyTip')">&times;</div>
+                <h2>tip</h2>
+                <p>Share your hobbies with friends or join a group! 
+                    Sharing your interests can enhance your enjoyment 
+                    and help you make new connections. </p>
+            </div>
+        </div>
+        <button class="button" id ="hobbyTip" onclick="togglePopup('popup-hobbyTip')">tip</button>
+
+        <!-- Pop-up Button for fun fact -->
+        <div class="popup" id="popup-hobbyFF">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup('popup-hobbyFF')">&times;</div>
+                <h2>fun fact</h2>
+                <p>The word “hobby” comes from “hobbyhorse,” a term used in the 14th century for 
+                    a child's toy and later for a favorite pastime.</p>
+            </div>
+        </div>
+        <button class="button" id ="hobbyFunFact" onclick="togglePopup('popup-hobbyFF')">fun fact</button>
+
+        <a href="#" class="button" id="hobby-done">Done! -></a>
     </div>
     <!-- 04ab. After Hobby2 Option Section -->
     <div id="afterHobby2" style="display: none;">
     </div>
     <!-- 05. Social Section -->
     <div id="socialPage" style="display: none;">
+        <div class="prompt">
+            <p>Bear has been a bit isolated lately. She hasn’t been keeping up with her friends or family for the past week. 
+                She hasn't even been going on coffee dates with her favorite bear!
+            </p>
+            <p>What about you? Have you been missing out on quality time with friends or loved ones? 
+                Now’s the perfect time to reach out and reconnect!
+            </p>
+        </div>
+        <a href="#" class="button" id="social1">I've had fun with friends! -></a>
+        <a href="#" class="button" id="social2">I've not been social lately! -></a>
+        </div>
     </div>
     <!-- 05a. Social2 Section -->
-    <div id="social2" style="display: none;">
+    <div id="social2Page" style="display: none;">
+        <h1>People Time!</h1>
+        <div class="comments">
+            <p>Now’s the moment to reconnect with friends and have a blast!</p>
+            <p>After you've had your social fun, come back to wrap up our little adventure!</p>
+        </div>
+    <div class="container">
+        <img class= "bearsocial" src="bearSocial.png" alt="bear socializing">
+    </div>
+    <!-- Pop-up Button for tip -->
+    <div class="popup" id="popup-socialTip">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-socialTip')">&times;</div>
+            <h2>tip</h2>
+            <p>Reach out to friends you haven’t talked to in a while!</p>
+            <p>Sometimes a simple text or call can make a big difference.</p>
+        </div>
+    </div>
+    <button class="button" id ="socialTip" onclick="togglePopup('popup-socialTip')">tip</button>
+
+    <!-- Pop-up Button for fun fact -->
+    <div class="popup" id="popup-socialFF">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup('popup-socialFF')">&times;</div>
+            <h2>fun fact</h2>
+            <p>People tend to like you more if you ask them for advice!</p>
+        </div>
+    </div>
+    <button class="button" id ="socialFunFact" onclick="togglePopup('popup-socialFF')">fun fact</button>
+
+    <a href="#" class="button" id="social-done">Done! -></a>
     </div>
     <!-- 05ab. After Social2 Option Section -->
     <div id="afterSocial2" style="display: none;">
     </div>
     <!-- 06. Final Page-->
-    <div id="finalPage" style="display: none;"></div>
+    <div id="finalPage" style="display: none;">
+        <h1>Thank you for playing!</h1>
+        <div class="comments">
+            <p>Bear hopes you enjoyed the journey and that you’re feeling a little more bearable!</p>
+            <p>Keep up the great work and don't forget to take care of yourself. Bear hopes to see you again!</p>
+        </div>
+        <div class="container">
+            <img class= "bearhappy" src="" alt="bear smiling">
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
