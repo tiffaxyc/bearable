@@ -95,12 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })
 
-function updateSleepTip() {
-    document.getElementById("sleepTip").innerHTML = "Make your bedroom a cozy, comfortable place for sleep.";
-}
-
-function updateSleepFunFact() {
-    document.getElementById("sleepFunFact").innerHTML = "Sea otters hold hands while they sleep to stay together!";
+function goBack(shown, hidden) {
+  document.querySelector('#' + hidden).style.display='none';
+  document.querySelector('#' + shown).style.display='block';
 }
 
 function togglePopup(popupID){

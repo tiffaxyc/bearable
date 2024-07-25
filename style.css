@@ -25,25 +25,28 @@ h1{
 }
 
 .container{
-	display: flex;
-	justify-content: center;
-	width: 100%;
+	width: 1030px;
+	height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -350px;
 }
 
 .bear{  
-	width: 800px;
-	margin-top: -150px;
-}
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}	
 
 .button {
     background-color: #f3cbd3; 
+	font-family: "FuturaHandwritten";
     color: #222; 
     border: none;
     padding: 30px 50px; 
-    font-size: 20px; 
-    font-family: "FuturaHandwritten"; 
+    font-size: 20px;
     cursor: pointer; 
-    border-radius: 50px; 
+    border-radius: 10x; 
 	position: absolute;
 	top: 85%;
 	left: 50%;
@@ -52,8 +55,27 @@ h1{
 	text-decoration: none;
 }
 
+.back-button{
+	background-color: #7c6d706a; 
+    color: #222; 
+    border: none;
+    padding: 15px 15px; 
+    cursor: pointer; 
+    border-radius: 10x; 
+	position: absolute;
+	top: 12%;
+	left: 7%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	text-decoration: none;
+}
+
 .button:hover {
     background-color: #f4a3b1;
+}
+
+.back-button:hover {
+    background-color: #6b5e606a;
 }
 
 .prompt{
@@ -68,19 +90,28 @@ h1{
 	top: 70%;
 }
 
-.bearSleep, .bearsocial{
+.bearhappy{
+	width: 900px;
+	margin-top: -400px;
+}
+.bearsocial{
+	width: 800px;
+	margin-top: -560px;
+}
+
+.bearSleep {
 	width: 600px;
 	margin-top: -370px;
 }
 
 .bearEat{
-	width: 400px;
-	margin-top: -150px;
+	width: 600px;
+	margin-top: -210px;
 }
 
-.bearExercise{
-	width: 650px;
-	margin-top: -330px;
+.bearExercise {
+	width: 750px;
+	margin-top: -400px;
 }
 
 .bearReading{
@@ -154,3 +185,18 @@ h1{
 	top: -60px;
 }
 
+@media (max-width: 768px) {
+    .bear {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .prompt {
+        font-size: 18px;
+    }
+}

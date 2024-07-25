@@ -12,7 +12,7 @@
     <div id="mainPage">
         <h1>bearable</h1>
         <div class="container">
-            <img class = "bear" src="bear1.png" alt="bear picture">
+            <img class = "bear" src="images/bear1.svg" alt="bear picture">
             <a href=# class="button" id="play-button">play -></a>
         </div>
     </div>
@@ -27,6 +27,7 @@
             <p>Why don't we accompany Bear in self-care practices for a more bear-able day? </p>
         </div>
         <a href="#" class="button" id="introButton">let's go! -></a>
+        <a href="#" class="back-button" onclick="goBack('mainPage', 'introPage');"> <-- </a>
     </div>
 
     <!-- 01. Sleep Task Page Section -->
@@ -39,6 +40,7 @@
         </div>
         <a href="#" class="button" id="sleep1">I am well-rested! -></a>
         <a href="#" class="button" id="sleep2">I am in need of a bear-sized nap! -></a>
+        <a href="#" class="back-button" onclick="goBack('introPage', 'sleepPage');"> <-- </a>
     </div>
     
     </div>
@@ -50,7 +52,7 @@
             <p>And don't forget, come back after you have rested!</p>
         </div>
         <div class="container">
-            <img class= "bearSleep" src="bearsleep.png" alt="bear sleeping in bed">
+            <img class= "bearSleep" src="images/bearsleep.svg" alt="bear sleeping in bed">
         </div>
         <!-- Pop-up Button for tip -->
         <div class="popup" id="popup-sleepTip">
@@ -75,11 +77,7 @@
         <button class="button" id ="sleepFunFact" onclick="togglePopup('popup-sleepFF')">fun fact</button>
 
         <a href="#" class="button" id="nap-done">Click if you've napped! -></a>
-    </div>
-
-    <!-- 01ab. After Sleep Section -->
-    <div id ="afterAllSleep" style="display: none;">
-        
+        <a href="#" class="back-button" onclick="goBack('sleepPage', 'sleep2Page');"> <-- </a>
     </div>
 
     <!-- 02. Eating Section -->
@@ -93,6 +91,7 @@
         </div>
         <a href="#" class="button" id="eat1">I have eaten! -></a>
         <a href="#" class="button" id="eat2">I am in need of a bear-sized meal! -></a>
+        <a href="#" class="back-button" onclick="goBack('sleepPage', 'eatPage');"> <-- </a>
     </div>
 
     <!-- 02a. Eat2 Option Section -->
@@ -103,7 +102,7 @@
             <p>After your meal, come back and let’s continue our adventure!</p>
         </div>
         <div class="container">
-            <img class= "bearEat" src="beareat.png" alt="bear holding honey">
+            <img class= "bearEat" src="images/beareat.svg" alt="bear holding honey">
         </div>
         <!-- Pop-up Button for tip -->
         <div class="popup" id="popup-eatTip">
@@ -130,12 +129,9 @@
         <button class="button" id ="eatFunFact" onclick="togglePopup('popup-eatFF')">fun fact</button>
 
         <a href="#" class="button" id="eat-done">Click if you've eaten! -></a>
+        <a href="#" class="back-button" onclick="goBack('eatPage', 'eatPage2');"> <-- </a>
     </div>
 
-    <!-- 02ab. After Eat2 Section -->
-    <div id="afterEat2" style="display:none;">
-        
-    </div>
     <!-- 03. Exercise Section -->
     <div id="exercisePage" style="display: none;">
         <div class="prompt">
@@ -148,6 +144,7 @@
         </div>
         <a href="#" class="button" id="exercise1">I've already moved! -></a>
         <a href="#" class="button" id="exercise2">I need to get moving! -></a>
+        <a href="#" class="back-button" onclick="goBack('eatPage', 'exercisePage');"> <-- </a>
     </div>
     <!-- 03a. Exercise2 Section -->
     <div id="exercise2Page" style="display:none;">
@@ -157,7 +154,7 @@
             <p>Once you’ve finished moving, return here and we’ll continue the fun!</p>
         </div>
         <div class="container">
-            <img class= "bearExercise" src="bearexercise.png" alt="bear exercising">
+            <img class= "bearExercise" src="images/bearexercise.svg" alt="bear exercising">
         </div>
         <!-- Pop-up Button for tip -->
         <div class="popup" id="popup-exerciseTip">
@@ -183,10 +180,9 @@
         <button class="button" id ="exerciseFunFact" onclick="togglePopup('popup-exerciseFF')">fun fact</button>
 
         <a href="#" class="button" id="exercise-done">Click here to finish up! -></a>
+        <a href="#" class="back-button" onclick="goBack('exercisePage', 'exercise2Page');"> <-- </a>
     </div>
-    <!-- 03ab. After Exercise2 Option Section -->
-    <div id="afterExercise2" style="display: none;">
-    </div>
+
     <!-- 04. Hobby Section -->
     <div id="hobbyPage" style="display: none;">
         <div class="prompt">
@@ -199,6 +195,7 @@
         </div>
         <a href="#" class="button" id="hobby1">I've been having fun! -></a>
         <a href="#" class="button" id="hobby2">I could use some time for hobbies! -></a>
+        <a href="#" class="back-button" onclick="goBack('exercisePage', 'hobbyPage');"> <-- </a>
     </div>
     <!-- 04a. Hobby2 Section -->
     <div id="hobby2Page" style="display: none;">
@@ -208,7 +205,7 @@
             <p>When you’re finished, come back here and we’ll continue having fun together!</p>
         </div>
         <div class="container">
-            <img class= "bearReading" src="bearread.png" alt="bear reading a red book">
+            <img class= "bearReading" src="images/bearread.svg" alt="bear reading a red book">
         </div>
         <!-- Pop-up Button for tip -->
         <div class="popup" id="popup-hobbyTip">
@@ -236,10 +233,9 @@
         <button class="button" id ="hobbyFunFact" onclick="togglePopup('popup-hobbyFF')">fun fact</button>
 
         <a href="#" class="button" id="hobby-done">Done! -></a>
+        <a href="#" class="back-button" onclick="goBack('hobbyPage', 'hobby2Page');"> <-- </a>
     </div>
-    <!-- 04ab. After Hobby2 Option Section -->
-    <div id="afterHobby2" style="display: none;">
-    </div>
+
     <!-- 05. Social Section -->
     <div id="socialPage" style="display: none;">
         <div class="prompt">
@@ -252,6 +248,7 @@
         </div>
         <a href="#" class="button" id="social1">I've had fun with friends! -></a>
         <a href="#" class="button" id="social2">I've not been social lately! -></a>
+        <a href="#" class="back-button" onclick="goBack('hobbyPage', 'socialPage');"> <-- </a>
         </div>
     </div>
     <!-- 05a. Social2 Section -->
@@ -262,7 +259,7 @@
             <p>After you've had your social fun, come back to wrap up our little adventure!</p>
         </div>
     <div class="container">
-        <img class= "bearsocial" src="bearSocial.png" alt="bear socializing">
+        <img class= "bearsocial" src="images/bearSocial.svg" alt="bear socializing">
     </div>
     <!-- Pop-up Button for tip -->
     <div class="popup" id="popup-socialTip">
@@ -288,10 +285,9 @@
     <button class="button" id ="socialFunFact" onclick="togglePopup('popup-socialFF')">fun fact</button>
 
     <a href="#" class="button" id="social-done">Done! -></a>
+    <a href="#" class="back-button" onclick="goBack('socialPage', 'social2Page');"> <-- </a>
     </div>
-    <!-- 05ab. After Social2 Option Section -->
-    <div id="afterSocial2" style="display: none;">
-    </div>
+
     <!-- 06. Final Page-->
     <div id="finalPage" style="display: none;">
         <h1>Thank you for playing!</h1>
@@ -300,10 +296,10 @@
             <p>Keep up the great work and don't forget to take care of yourself. Bear hopes to see you again!</p>
         </div>
         <div class="container">
-            <img class= "bearhappy" src="" alt="bear smiling">
+            <img class= "bearhappy" src="images/bearHappy.svg" alt="bear smiling">
         </div>
+        <a href="#" class="back-button" onclick="goBack('socialPage', 'finalPage');"> <-- </a>
     </div>
-
 
     <script src="script.js"></script>
 </body>
