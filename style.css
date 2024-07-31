@@ -24,12 +24,12 @@ h1{
 	margin: 100px;
 }
 
-.container{
+.container, .containerSocial{
 	width: 1030px;
-	height: 800px;
+	height: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -360px;
+	margin-top: -350px;
 }
 
 .containerSleep{
@@ -37,7 +37,7 @@ h1{
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -190px;
+	margin-top: -600px;
 }
 
 .containerEat{
@@ -72,7 +72,7 @@ h1{
 
 .button {
     background-color: #f3cbd3; 
-	font-family: "FuturaHandwritten";
+	font-family: 'FuturaHandwritten';
     color: #222; 
     border: none;
     padding: 30px 50px; 
@@ -111,11 +111,12 @@ h1{
 }
 
 .prompt{
+	width: 1030px;
+	height: 900px;
 	margin: auto;
-	width: 50%;
 	text-align: center;
 	font-size: 30px;
-	padding: 30px;
+	padding: 50px;
 }
 
 #sleep1, #eat1, #exercise1, #hobby1, #social1{
@@ -190,6 +191,10 @@ h1{
 }
 
 .comments{
+	width: 1030px;
+	height: 500px;
+	margin: auto;
+	text-align: center;
 	position: relative;
 	top: -60px;
 }
@@ -198,6 +203,72 @@ h1{
 	.container{
 		width: 100%;
 	}
+	.prompt{
+		width: 65%;
+		font-size: 19px;
+	}
+	.button {
+		padding: 12px 12px; 
+		font-size: 15px;
+		top: 88%;
+	}
+	.back-button{
+		padding: 8px 8px; 
+		font-size: 17px;
+		top: 5%;
+	}
+	#sleep1, #eat1, #exercise1, #hobby1, #social1{
+		top: 78%;
+	}	
+	.comments{
+		width: 80%;
+		font-size: 17px;
+	}
+
+	.containerSleep{
+		width: 100%;
+		margin-top: -525px;
+	}
+	
+	.containerEat{
+		width: 100%;
+		margin-top: -525px;
+	}
+
+	#sleepTip, #eatTip, #exerciseTip, #hobbyTip, #socialTip{
+        margin-right: auto; 
+        top: 5%; 
+        padding: 10px 10px;
+		margin-left: 50px;
+	}
+
+	#sleepFunFact, #eatFunFact, #exerciseFunFact, #hobbyFunFact, #socialFunFact{
+		margin-right: auto; 
+        top: 5%; 
+        padding: 10px 10px;
+		margin-left: 112px;
+	}
+
+	.containerExercise{
+		width: 100%;
+		margin-top: -665px;
+	}
+
+	h1{
+		font-size: 30px;
+		margin: 50px;
+		padding: 30px 30px;
+	}
+
+	.containerRead{
+		width: 100%;
+		margin-top: -600px;
+	}
+
+	.containerSocial{
+		width: 100%;
+		margin-top: -800px;
+	}
 }
 
 @media only screen and (min-width: 601px) {
@@ -205,6 +276,7 @@ h1{
 		max-width: 100%;
 		
 	}
+	
 }
 
 @media only screen and (min-width: 768px) {
